@@ -1,0 +1,35 @@
+
+<p>{{ expenseService.expenses$()}}</p>
+<p>{{ expenseService.total() }}</p>
+
+@for (expenses of expenseService.expenses$(); track expenses.id) {
+    <div>
+        {{ expenses.title }} - ${{ expenses.amount }} ({{ expenses.category }})
+    </div>
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand">Expense Tracker</a>
+  <form class="form-inline">
+    <button class="btn btn-outline-light mr-2" routerLink="/dashboard" type="button">Dashboard</button>
+    <button class="btn btn-outline-light mr-2" routerLink="/add" type="button">Add Expense</button>
+    <button class="btn btn-outline-light" routerLink="/expenses" type="button">View Expenses</button>
+  </form>
+</nav> 
+
+<div class="container mt-3">
+  <router-outlet></router-outlet>
+</div>

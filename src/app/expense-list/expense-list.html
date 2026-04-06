@@ -1,0 +1,6 @@
+<p>write some expense list stuff</p>
+@for (expense of expenseService.expenses$(); track expense.id) {
+<p>
+    {{ expense.title }} - {{ expense.amount }} ({{ expense.category }})
+</p>
+}

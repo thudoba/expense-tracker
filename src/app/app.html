@@ -1,13 +1,3 @@
-
-<p>{{ expenseService.expenses$()}}</p>
-<p>{{ expenseService.total() }}</p>
-
-@for (expenses of expenseService.expenses$(); track expenses.id) {
-    <div>
-        {{ expenses.title }} - ${{ expenses.amount }} ({{ expenses.category }})
-    </div>
-}
-
 <!doctype html>
 <html lang="en">
 <head>

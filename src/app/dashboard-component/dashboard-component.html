@@ -1,5 +1,29 @@
-<div class="container mt-4">
+<div class="container mt-4 text-center">
     <h2>Dashboard</h2>
-    <p>Total: {{ expenseService.total() }}</p>
-    <p>Count: {{ expenseService.count() }}</p>
+</div>
+<div class="row">
+<div class="card border-primary col-sm-6 mb-2 text-center">
+    <h4>Total Expenses</h4>
+  <div  class="card-body text-primary">
+    <h5>${{ expenseService.total() }}</h5>
+  </div>
+</div>
+<div class="card border-success col-sm-6 mb-2 text-center">
+    <h4>Number of Expenses</h4>
+  <div class="card-body text-success">
+    <h4> {{ expenseService.count() }} </h4>
+  </div>
+</div>
+<div class="card border-success col-sm-6 mb-2 text-center">
+    <h4>Highest Expense</h4>
+  <div class="card-body text-success">
+    <h4> ${{ expenseService.highest() }} </h4>
+  </div>
+</div>
+<div class="card border-success col-sm-6 mb-2 text-center">
+    <h4>Average Expense per Transaction</h4>
+  <div class="card-body text-success">
+    <h4> ${{ expenseService.avg() }} </h4>
+  </div>
+</div>
 </div>
